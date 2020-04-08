@@ -1,0 +1,64 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+namespace UnitTest1
+{
+	TEST_CLASS(UnitTest1)
+	{
+	public:
+		TEST_METHOD(TestMethod1)
+		{
+			int n = 5;
+			int a[5] = { -4,-9,-5,-6,-7 };
+			int sum1 = 0, t = 0, sum = 0;
+			int Sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 0)
+					t = 1;
+				if (t == 1)
+				{
+					sum1 += a[i];
+					sum = sum < sum1 ? sum1 : sum;
+				}
+			}
+			Assert::AreEqual(sum, Sum);
+		}
+		TEST_METHOD(TestMethod2)
+		{
+			int n = 5;
+			int a[5] = { -3,15,-5,14,-4 };
+			int sum1 = 0, t = 0, sum = 0;
+			int Sum = 24;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 0)
+					t = 1;
+				if (t == 1)
+				{
+					sum1 += a[i];
+					sum = sum < sum1 ? sum1 : sum;
+				}
+			}
+			Assert::AreEqual(sum, Sum);
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			int n = 5;
+			int a[5] = { 2,8,-5,-6,5 };
+			int sum1 = 0, t = 0, sum = 0;
+			int Sum = 10;
+			for (int i = 0; i < n; i++)
+			{
+				if (a[i] > 0)
+					t = 1;
+				if (t == 1)
+				{
+					sum1 += a[i];
+					sum = sum < sum1 ? sum1 : sum;
+				}
+			}
+			Assert::AreEqual(sum, Sum);
+		}
+	};
+}
