@@ -3,7 +3,7 @@
 #include<time.h>
 int questionNum;//题目数量
 int symbolNum;//运算符种类数
-char symbolType[4];//运算符种类
+char symbolType[5];//运算符种类
 int maxNum;//数字最大值
 int brackets;//是否有括号
 int decimal;//是否有小数
